@@ -19,14 +19,27 @@
   font-size: 32px;
   line-height: 1;
   font-family: "Poppins", sans-serif;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 420px;
 }
 .profile__description {
   margin: 0;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   opacity: 0.7;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .profile__edit-btn {
   margin-top: auto;
