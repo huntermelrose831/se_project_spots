@@ -1,11 +1,9 @@
-.card {
-  width: 413px;
-}
 .card__image {
   height: 413px;
-  width: 413px;
+  width: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 8px;
 }
 .card__content {
   display: flex;
@@ -18,4 +16,17 @@
   width: 23px;
   border: none;
   background-color: transparent;
+}
+.card__title {
+  width: 119px;
+  height: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+@media screen and (max-width: 627px) {
+  .card__image {
+    height: 288px;
+  }
 }
