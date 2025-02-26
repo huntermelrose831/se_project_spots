@@ -50,6 +50,10 @@
   background-color: transparent;
   opacity: 0.7;
 }
+.profile__edit-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
 
 .profile__add-btn {
   margin-left: auto;
@@ -62,6 +66,10 @@
   gap: 8px;
   margin-top: auto;
   align-items: center;
+}
+.profile__add-btn:hover {
+  background-color: #424242;
+  transform: scale(1.1);
 }
 .plus__icon {
   width: 12px;

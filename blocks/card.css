@@ -21,6 +21,9 @@
   cursor: pointer;
   margin-bottom: 36px;
 }
+.card__like-button:hover {
+  transform: scale(1.2);
+}
 .card__title {
   height: 24px;
   font-family: "Poppins", sans-serif;
