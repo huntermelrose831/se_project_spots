@@ -40,6 +40,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  max-width: 420px;
 }
 .profile__edit-btn {
   margin-top: auto;
@@ -74,6 +75,7 @@
     align-items: center;
     text-align: center;
     padding-top: 20px;
+    max-width: 288px;
   }
   .profile__avatar {
     margin-right: 0;
