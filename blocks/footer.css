@@ -1,9 +1,9 @@
 .footer {
   display: flex;
   justify-content: center;
-  margin: 36px 0 0;
+
   border-top: 1px solid rgba(33, 33, 33, 0.4);
-  margin: 0 80px;
+  margin: 36px 80px 0;
 }
 .footer__copyright {
   margin: 60px 0;
