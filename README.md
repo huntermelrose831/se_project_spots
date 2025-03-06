@@ -14,6 +14,10 @@ This is a project where you can edit you're profile and add images with descript
 -mobile view
 -media queries
 
+## Project Video
+
+https://drive.google.com/file/d/1Jyu-_D8q_f7_nHr57D64ateDAZhQttGu/view?usp=sharing
+
 ## Deployment
 
 This website is deployed to github pages
