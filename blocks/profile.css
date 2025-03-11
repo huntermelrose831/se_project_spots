@@ -109,10 +109,14 @@
   }
   .profile__description {
     margin: 0 0 32px;
+    text-wrap: wrap;
   }
   .profile__name {
     font-size: 20px;
     line-height: 1;
     margin: 12px 0 6px;
+    text-wrap: wrap;
+
+    max-width: 320px;
   }
 }
