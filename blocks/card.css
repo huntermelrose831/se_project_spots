@@ -12,7 +12,7 @@
   align-items: center;
 }
 .card__like-button {
-  background-image: url(../images/likeicon.svg);
+  background-image: url(../images/LikeIcon.svg);
   height: 20px;
   width: 24px;
   border: none;
