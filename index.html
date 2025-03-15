@@ -23,13 +23,8 @@
             class="profile__avatar"
           />
           <div class="profile__column">
-            <h1 class="profile__name">
-              Bessie ColemanBessie ColemanBessie ColemanBessie ColemanBessie
-              ColemanBessie ColemanBessie Coleman
-            </h1>
-            <p class="profile__description">
-              Civil AviatorCivil AviatorCivil AviatorCivil AviatorCivil Aviator
-            </p>
+            <h1 class="profile__name">Bessie Coleman</h1>
+            <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
               <img
                 src="./images/pencil.svg"
@@ -122,6 +117,33 @@
       <footer class="footer">
         <p class="footer__copyright">2025 &copy; Hunter Melrose</p>
       </footer>
+      <div class="modal">
+        <div class="modal__container">
+          <button type="submit" class="modal__close-btn"></button>
+          <h2 class="modal__title">Edit Profile</h2>
+          <form name="Edit Profile" class="modal__form">
+            <label for="name" class="modal__label"
+              >Name
+              <input
+                placeholder="Type your name"
+                id="name"
+                type="text"
+                class="modal__input"
+              />
+            </label>
+            <label for="description" class="modal__label"
+              >Description
+              <input
+                placeholder="Describe yourself"
+                id="description"
+                type="text"
+                class="modal__input"
+              />
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
     <script defer src="./scripts/index.js"></script>
   </body>
