@@ -10,8 +10,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 16px;
-}
-.modal__form {
+  visibility: hidden;
 }
 .modal_opened {
   visibility: visible;
@@ -86,10 +85,9 @@
 }
 .modal__input:hover {
   opacity: 1;
-  border: 1px;
 }
 .modal__input::placeholder {
-  opacity: 0.4;
+  opacity: 1;
 }
 @media screen and (max-width: 627px) {
   .modal {
