@@ -62,7 +62,7 @@
   cursor: pointer;
 }
 
-.profile__add-btn {
+.profile__post-btn {
   margin-left: auto;
   background-color: #212121;
   color: #fcf5e5;
@@ -75,7 +75,7 @@
   margin-top: auto;
   align-items: center;
 }
-.profile__add-btn:hover {
+.profile__post-btn:hover {
   opacity: 0.7;
   cursor: pointer;
 }
@@ -98,7 +98,7 @@
     height: 80px;
     width: 80px;
   }
-  .profile__add-btn {
+  .profile__post-btn {
     margin: 20px 0 0;
     justify-content: center;
     align-items: center;
