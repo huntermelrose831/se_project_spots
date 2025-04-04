@@ -45,10 +45,18 @@
           <ul class="cards__list">
             <template id="card-template">
               <li class="card">
+                <button
+                  type="button"
+                  class="card__delete card__delete_button_hover"
+                ></button>
                 <img src="" alt="" class="card__image" />
+
                 <div class="card__content">
                   <h2 class="card__title"></h2>
-                  <button type="button" class="card__like-button"></button>
+                  <button
+                    type="button"
+                    class="card__like-button card__like-button_liked"
+                  ></button>
                 </div>
               </li>
             </template>
@@ -114,6 +122,16 @@
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
+      </div>
+    </div>
+    <div class="modal" id="preview-modal">
+      <div class="modal__container modal__container_type_preview">
+        <button
+          type="button"
+          class="modal__close-btn modal__close_type_preview"
+        ></button>
+        <img class="modal__image" />
+        <p class="modal__caption"></p>
       </div>
     </div>
     <script defer src="./scripts/index.js"></script>

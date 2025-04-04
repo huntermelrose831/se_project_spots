@@ -11,12 +11,33 @@
   justify-content: space-between;
   align-items: center;
 }
+.card__delete {
+  background: url(../images/Group\ 35.svg);
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 10px 10px 0 371px;
+  padding: 0;
+  top: 40px;
+  right: 5px;
+
+  position: relative;
+  justify-content: center;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card__delete:hover {
+  background-color: #ff6565;
+}
 .card__like-button {
-  background-image: url(../images/LikeIcon.svg);
+  background: transparent url(../images/LikeIcon.svg);
   height: 20px;
   width: 24px;
   border: none;
-  background-color: transparent;
   padding: 0;
   opacity: 0.4;
   cursor: pointer;
@@ -24,6 +45,18 @@
 .card__like-button:hover {
   opacity: 1;
 }
+.card__like-button_liked {
+  background-image: url(../images/LikeIconDarkRed.svg);
+  color: #fcf5e5;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  opacity: 1;
+}
+.card__like-button_liked:hover {
+  background: transparent url(../images/LikeIconPink.svg);
+}
+
 .card__title {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
