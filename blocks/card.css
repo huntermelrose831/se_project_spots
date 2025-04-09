@@ -31,30 +31,28 @@
   background-position: center;
 }
 .card__delete:hover {
-  background-color: #ff6565;
 }
 .card__like-button {
-  background: transparent url(../images/LikeIcon.svg);
+  background: transparent url(../images/Union.png);
   height: 20px;
   width: 24px;
   border: none;
   padding: 0;
-  opacity: 0.4;
+  opacity: 1;
   cursor: pointer;
+  background-repeat: no-repeat;
 }
 .card__like-button:hover {
   opacity: 1;
+  background: transparent url(../images/LikeIconPink.svg);
 }
 .card__like-button_liked {
-  background-image: url(../images/Union.png);
-  color: #fcf5e5;
+  background-image: url(../images/LikeIcon.svg);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
   opacity: 1;
-}
-.card__like-button_liked:hover {
-  background: transparent url(../images/LikeIconPink.svg);
 }
 
 .card__title {
