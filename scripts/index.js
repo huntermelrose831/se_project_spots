@@ -30,7 +30,6 @@ const initialCards = [
     alt: "Mountain house",
   },
 ];
-console.log("JavaScript is running");
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
 const cardModalOpenButton = document.querySelector(".profile__post-btn");

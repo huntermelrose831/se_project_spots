@@ -12,7 +12,7 @@
   align-items: center;
 }
 .card__delete {
-  background: url(../images/Group\ 35.svg);
+  background: url(../images/group35.svg);
   display: flex;
   background-color: rgba(0, 0, 0, 0.3);
   border: none;
@@ -46,7 +46,7 @@
   opacity: 1;
 }
 .card__like-button_liked {
-  background-image: url(../images/LikeIconDarkRed.svg);
+  background-image: url(../images/Union.png);
   color: #fcf5e5;
   background-repeat: no-repeat;
   background-position: center;
