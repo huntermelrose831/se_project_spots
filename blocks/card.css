@@ -31,9 +31,10 @@
   background-position: center;
 }
 .card__delete:hover {
+  background: url(../images/liked.svg);
 }
 .card__like-button {
-  background: transparent url(../images/Union.png);
+  background: url(../images/Union.svg);
   height: 20px;
   width: 24px;
   border: none;
@@ -71,6 +72,7 @@
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
+    max-width: 288px;
   }
   .card__like-button {
     width: 25px;
@@ -78,5 +80,8 @@
   .card__title {
     font-size: 16px;
     line-height: 1;
+  }
+  .card__delete {
+    right: 120px;
   }
 }
