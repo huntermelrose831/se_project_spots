@@ -168,4 +168,7 @@
     top: -30px;
     right: 102px;
   }
+  .modal__input {
+    font-size: 15px;
+  }
 }

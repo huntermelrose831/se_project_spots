@@ -130,7 +130,7 @@ cardForm.addEventListener("submit", handleAddCardFormSubmit);
 
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
-  cardList.append(cardElement);
+  cardList.prepend(cardElement);
 });
 const previewModalCloseButton = previewModal.querySelector(".modal__close-btn");
 
