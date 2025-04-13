@@ -42,7 +42,7 @@
   width: 24px;
   border: none;
   padding: 0;
-  opacity: 0.4;
+  opacity: 1;
   cursor: pointer;
   background-repeat: no-repeat;
 }
@@ -56,7 +56,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  opacity: 1;
+  opacity: 0.4;
 }
 
 .card__title {
