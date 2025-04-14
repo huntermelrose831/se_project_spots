@@ -60,6 +60,7 @@
   position: absolute;
   right: 50px;
   width: 40px;
+  color: #fff;
   height: 40px;
   border: none;
   background: transparent url(../images/modalclosebtn.svg) center no-repeat;
@@ -67,7 +68,7 @@
   background-size: 35px 35px;
   border: none;
   cursor: pointer;
-  opacity: 0.4;
+
   padding: 0;
   margin: 0;
 }
@@ -77,10 +78,11 @@
 .modal__close_type_preview {
   top: 0;
   right: -52.5px;
+  background-image: url(../images/modalclosebtnwhite.svg);
 }
 
 .modal__close_type_preview:hover {
-  opacity: 1;
+  opacity: 0.4;
 }
 .modal__title {
   margin: 0 0 32px;
@@ -168,8 +170,10 @@
   .modal__submit-btn {
     width: 100%;
   }
-  .model__image {
-    width: 288px;
+  .modal__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
   }
 
   .modal__input {
