@@ -76,6 +76,7 @@
   opacity: 1;
 }
 .modal__close_type_preview {
+  transition: 0.3s;
   top: 0;
   right: -52.5px;
   background-image: url(../images/modalclosebtnwhite.svg);
@@ -154,6 +155,12 @@
   .modal__container {
     padding: 12px;
   }
+  .modal__container_type_preview {
+    padding: 0;
+    position: relative;
+    background-color: transparent;
+    min-width: 288px;
+  }
   .modal__title {
     font-size: 28px;
 
@@ -172,6 +179,7 @@
   }
   .modal__image {
     width: 100%;
+    min-width: 288px;
     height: auto;
     border-radius: 8px;
   }
