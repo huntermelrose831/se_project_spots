@@ -78,7 +78,11 @@
                 id="profile-name-input"
                 type="text"
                 class="modal__input"
+                required
+                minlength="2"
+                maxlength="40"
               />
+              <span id="profile-name-input-error" class="modal__error"></span>
             </label>
             <label class="modal__label"
               >Description
@@ -87,7 +91,14 @@
                 id="profile-description-input"
                 type="text"
                 class="modal__input"
+                required
+                minlength="2"
+                maxlength="200"
               />
+              <span
+                id="profile-description-input-error"
+                class="modal__error"
+              ></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
@@ -111,7 +122,9 @@
                 type="url"
                 name="link"
                 class="modal__input"
+                required
               />
+              <span id="add-card-link-input-error" class="modal__error"></span>
             </label>
             <label for="add-card-name-input" class="modal__label"
               >Caption
@@ -121,7 +134,11 @@
                 type="text"
                 name="name"
                 class="modal__input"
+                required
+                minlength="2"
+                maxlength="30"
               />
+              <span id="add-card-name-input-error" class="modal__error"></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
@@ -139,5 +156,6 @@
       </div>
     </div>
     <script defer src="./scripts/index.js"></script>
+    <script defer src="./scripts/validation.js"></script>
   </body>
 </html>
