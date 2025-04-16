@@ -41,7 +41,6 @@ const editFormElement = editModal.querySelector(".modal__form");
 const closeModalButton = editModal.querySelector(".modal__close-btn");
 const nameInput = editModal.querySelector("#profile-name-input");
 const descriptionInput = editModal.querySelector("#profile-description-input");
-
 const cardTemplate = document.querySelector("#card-template");
 
 const cardList = document.querySelector(".cards__list");
@@ -50,6 +49,8 @@ const cardForm = cardModal.querySelector(".modal__form");
 const cardModalCloseButton = cardModal.querySelector(".modal__close-btn");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
+const cardSubmitButton = cardModal.querySelector(".modal__submit-btn");
+
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImageElement = previewModal.querySelector(".modal__image");
 const previwModalCaptionElement = previewModal.querySelector(".modal__caption");
@@ -84,12 +85,24 @@ function getCardElement(data) {
 
   return cardElement;
 }
+
 function openModal(modal) {
   modal.classList.add("modal_opened");
+
+  // Add Escape key functionality to close the modal only when it's open
+  const closeModalOnEscape = (evt) => {
+    if (evt.key === "Escape") {
+      closeModal(modal);
+      document.removeEventListener("keydown", closeModalOnEscape); // Remove listener after closing
+    }
+  };
+  document.addEventListener("keydown", closeModalOnEscape);
 }
+
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
 }
+
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
@@ -105,12 +118,14 @@ function handleAddCardFormSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardList.prepend(cardElement);
   evt.target.reset();
+  disableButton(cardSubmitButton);
   closeModal(cardModal);
 }
 
 profileEditButton.addEventListener("click", () => {
   nameInput.value = profileName.textContent;
   descriptionInput.value = profileDescription.textContent;
+  resetValidation(editFormElement, [nameInput, descriptionInput]);
   openModal(editModal);
 });
 
@@ -133,8 +148,19 @@ initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardList.prepend(cardElement);
 });
+
 const previewModalCloseButton = previewModal.querySelector(".modal__close-btn");
 
 previewModalCloseButton.addEventListener("click", () => {
   closeModal(previewModal);
+});
+
+// Add overlay click functionality to close modals
+const modals = document.querySelectorAll(".modal");
+modals.forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target.classList.contains("modal")) {
+      closeModal(modal);
+    }
+  });
 });
