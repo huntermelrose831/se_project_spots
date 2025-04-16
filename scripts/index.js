@@ -89,11 +89,10 @@ function getCardElement(data) {
 function openModal(modal) {
   modal.classList.add("modal_opened");
 
-  // Add Escape key functionality to close the modal only when it's open
   const closeModalOnEscape = (evt) => {
     if (evt.key === "Escape") {
       closeModal(modal);
-      document.removeEventListener("keydown", closeModalOnEscape); // Remove listener after closing
+      document.removeEventListener("keydown", closeModalOnEscape);
     }
   };
   document.addEventListener("keydown", closeModalOnEscape);
@@ -155,7 +154,6 @@ previewModalCloseButton.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
-// Add overlay click functionality to close modals
 const modals = document.querySelectorAll(".modal");
 modals.forEach((modal) => {
   modal.addEventListener("mousedown", (evt) => {
