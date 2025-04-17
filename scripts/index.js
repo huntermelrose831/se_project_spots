@@ -15,7 +15,7 @@ const initialCards = [
     alt: "An outdoor cafe",
   },
   {
-    name: "A very long bridge, over the forest and through the trees",
+    name: "A very long bridge, over the forest and through the treesjsjsjsjsjsjsjsjsjs",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg",
     alt: "A very long bridge, over the forest and through the trees",
   },
@@ -89,6 +89,7 @@ function getCardElement(data) {
 function openModal(modal) {
   modal.classList.add("modal_opened");
 
+  // Add Escape key functionality to close the modal only when it's open
   const closeModalOnEscape = (evt) => {
     if (evt.key === "Escape") {
       closeModal(modal);
@@ -148,12 +149,15 @@ initialCards.forEach((item) => {
   cardList.prepend(cardElement);
 });
 
-const previewModalCloseButton = previewModal.querySelector(".modal__close-btn");
+const previewModalCloseButton = previewModal.querySelector(
+  ".modal__close-btn_preview"
+);
 
 previewModalCloseButton.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
+// Add overlay click functionality to close modals
 const modals = document.querySelectorAll(".modal");
 modals.forEach((modal) => {
   modal.addEventListener("mousedown", (evt) => {

@@ -11,9 +11,15 @@
   justify-content: center;
   padding: 0 16px;
   visibility: hidden;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
+  opacity: 0;
+  pointer-events: none;
 }
 .modal_opened {
   visibility: visible;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
+  opacity: 1;
+  pointer-events: auto;
 }
 .modal__container {
   background: #fff;
@@ -49,6 +55,7 @@
   font-weight: 400;
   max-width: fit-content;
   height: 32px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,15 +82,28 @@
 .modal__close-btn:hover {
   opacity: 1;
 }
-.modal__close_type_preview {
+.modal__close-btn_preview {
   transition: 0.3s;
-  top: 0;
-  right: -52.5px;
-  background-image: url(../images/modalclosebtnwhite.svg);
+  right: -50px;
+  background: transparent url(../images/modalclosebtnwhite.svg);
+  transition: 0.3s;
+  position: absolute;
+  opacity: 0.4;
+  width: 40px;
+  color: #fff;
+  height: 40px;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 
-.modal__close_type_preview:hover {
-  opacity: 0.4;
+.modal__close-btn_preview:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 .modal__title {
   margin: 0 0 32px;
@@ -121,8 +141,8 @@
   opacity: 0.8;
   cursor: pointer;
 }
-.modal__button_disabled {
-  background-color: #bdbdbd;
+.modal__submit-btn_disabled {
+  background-color: rgba(33, 33, 33, 0.5);
   cursor: not-allowed;
 }
 .modal__input {
@@ -138,7 +158,8 @@
   cursor: pointer;
 }
 .modal__input:hover {
-  opacity: 1;
+  opacity: 2;
+  border: 1px solid #212121;
 }
 .modal__input::placeholder {
   opacity: 1;
@@ -161,7 +182,7 @@
   visibility: visible;
 }
 .modal__image {
-  max-width: 80vw;
+  max-width: 90vw;
   max-height: 80vh;
   width: 100%;
 
@@ -182,14 +203,15 @@
     background-color: transparent;
     min-width: 288px;
   }
+
   .modal__title {
     font-size: 28px;
 
     margin: 10px 0 34px;
   }
-  .modal__close_type_preview {
-    top: -40px;
-    right: 0;
+  .modal__close-btn_preview {
+    right: -5px;
+    top: -38px;
   }
 
   .modal__label {
