@@ -119,7 +119,6 @@ function handleAddCardFormSubmit(evt) {
   closeModal(cardModal);
   evt.target.reset();
   const inputList = [cardNameInput, cardLinkInput];
-  resetValidation(cardForm, inputList, settings);
   disableButton(cardSubmitButton, settings); // Move this line to the end
 }
 profileEditButton.addEventListener("click", () => {
