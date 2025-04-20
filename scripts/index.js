@@ -118,7 +118,6 @@ function handleAddCardFormSubmit(evt) {
   cardList.prepend(cardElement);
   closeModal(cardModal);
   evt.target.reset();
-  const inputList = [cardNameInput, cardLinkInput];
   disableButton(cardSubmitButton, settings); // Move this line to the end
 }
 profileEditButton.addEventListener("click", () => {
@@ -133,13 +132,8 @@ closeModalButton.addEventListener("click", () => {
 });
 
 cardModalOpenButton.addEventListener("click", () => {
-  cardForm.reset();
-  console.log(
-    "Modal opened - checking if form has submit listener:",
-    cardForm.hasEventListener
-  );
   const inputList = [cardNameInput, cardLinkInput];
-  resetValidation(cardForm, inputList, settings);
+
   openModal(cardModal);
 });
 cardModalCloseButton.addEventListener("click", () => {
