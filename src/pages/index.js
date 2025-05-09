@@ -1,3 +1,14 @@
+import "../pages/index.css";
+import { enableValidation, settings } from "../scripts/validation.js";
+import PencilIcon from "../images/pencil.svg";
+import PlusIcon from "../images/plusicon.svg";
+import ProfileAvatar from "../images/avatar.jpg";
+const profileAvatar = document.getElementById("profile-avatar");
+profileAvatar.src = ProfileAvatar;
+const plusIcon = document.getElementById("add-card-btn");
+plusIcon.src = PlusIcon;
+const pencilIcon = document.getElementById("edit-profile-btn");
+pencilIcon.src = PencilIcon;
 const initialCards = [
   {
     name: "Val Thorens",
@@ -165,3 +176,4 @@ modals.forEach((modal) => {
     }
   });
 });
+enableValidation(validationConfig);
