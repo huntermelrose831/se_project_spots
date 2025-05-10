@@ -18,6 +18,10 @@ const hideInputError = (formEl, inputEl, config) => {
   inputEl.classList.remove(config.inputErrorClass);
   errorMsgEl.textContent = "";
 };
+export function disableButton(buttonEl, config) {
+  buttonEl.classList.add(config.inactiveButtonClass);
+  buttonEl.disabled = true;
+}
 
 const checkInputValidity = (formEl, inputEl, config) => {
   if (!inputEl.validity.valid) {
