@@ -9,6 +9,20 @@
   width: 190px;
   border-radius: 8px;
   object-fit: cover;
+  position: relative;
+}
+.profile__avatar-container {
+  position: relative;
+}
+.profile__avatar-btn {
+  position: absolute;
+  z-index: 1;
+}
+.profile__avatar-btn:hover {
+  opacity: 1;
+}
+.profile__avatar-btn::after {
+  content: "Edit Avatar";
 }
 .profile__column {
   display: flex;

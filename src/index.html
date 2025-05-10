@@ -13,15 +13,25 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="./src/images/spotslogo.svg" alt="" class="header__logo" />
+        <img id="header-logo" alt="" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            id="profile-avatar"
-            alt="Bessie Coleman"
-            class="profile__avatar"
-          />
+          <div class="profile__avatar-container">
+            <button class="profile__avatar-btn">
+              <img
+                id="avatar-btn"
+                alt="Pencil Icon"
+                class="profile__pencil-icon"
+              />
+            </button>
+
+            <img
+              id="profile-avatar"
+              alt="Bessie Coleman"
+              class="profile__avatar"
+            />
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>

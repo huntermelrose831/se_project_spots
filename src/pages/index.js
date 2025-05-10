@@ -1,15 +1,16 @@
 import "../pages/index.css";
-import { enableValidation, settings } from "../scripts/validation.js";
+import {
+  enableValidation,
+  settings,
+  resetValidation,
+} from "../scripts/validation.js";
 import PencilIcon from "../images/pencil.svg";
 import PlusIcon from "../images/plusicon.svg";
 import ProfileAvatar from "../images/avatar.jpg";
-const profileAvatar = document.getElementById("profile-avatar");
-profileAvatar.src = ProfileAvatar;
-const plusIcon = document.getElementById("add-card-btn");
-plusIcon.src = PlusIcon;
-const pencilIcon = document.getElementById("edit-profile-btn");
-pencilIcon.src = PencilIcon;
-const initialCards = [
+import HeaderLogo from "../images/spotslogo.svg";
+import Api from "../utils/Api.js";
+import AvatarBtn from "../images/pencil.svg";
+/*const initialCards = [
   {
     name: "Val Thorens",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
@@ -40,7 +41,36 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
     alt: "Mountain house",
   },
-];
+];*/
+const api = new Api({
+  baseUrl: "https://around-api.en.tripleten-services.com/v1",
+  header: {
+    authorization: "924751a2-426f-4bc5-ab74-ba7e42f02748",
+    "Content-Type": "application/json",
+  },
+});
+
+api
+  .getAppInfo()
+  .then((results) => {
+    const cards = results[0];
+    cards.forEach((item) => {
+      const cardElement = getCardElement(item);
+      cardList.append(cardElement);
+    });
+  })
+  .catch(console.error);
+
+const avatarBtn = document.getElementById("avatar-btn");
+avatarBtn.src = AvatarBtn;
+const headerLogo = document.getElementById("header-logo");
+headerLogo.src = HeaderLogo;
+const profileAvatar = document.getElementById("profile-avatar");
+profileAvatar.src = ProfileAvatar;
+const plusIcon = document.getElementById("add-card-btn");
+plusIcon.src = PlusIcon;
+const pencilIcon = document.getElementById("edit-profile-btn");
+pencilIcon.src = PencilIcon;
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
 const cardModalOpenButton = document.querySelector(".profile__post-btn");
@@ -116,14 +146,20 @@ function closeModal(modal) {
 
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
-  profileName.textContent = nameInput.value;
-  profileDescription.textContent = descriptionInput.value;
-  closeModal(editModal);
+  api
+    .editUserInfo({ name: nameInput.value, about: descriptionInput.value })
+    .then((data) => {
+      profileName.textContent = data.name;
+      profileDescription.textContent = data.about;
+      closeModal(editModal);
+    })
+    .catch(console.error);
 }
 
 function handleAddCardFormSubmit(evt) {
   console.log("Form submitted");
   evt.preventDefault();
+
   const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
   const cardElement = getCardElement(inputValues);
   cardList.prepend(cardElement);
@@ -154,11 +190,6 @@ cardModalCloseButton.addEventListener("click", () => {
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardFormSubmit);
 
-initialCards.forEach((item) => {
-  const cardElement = getCardElement(item);
-  cardList.prepend(cardElement);
-});
-
 const previewModalCloseButton = previewModal.querySelector(
   ".modal__close-btn_preview"
 );
@@ -176,4 +207,4 @@ modals.forEach((modal) => {
     }
   });
 });
-enableValidation(validationConfig);
+enableValidation(settings);
