@@ -156,8 +156,7 @@ function handleEditFormSubmit(evt) {
       profileDescription.textContent = data.about;
       closeModal(editModal);
       evt.target.reset();
-      disableButton(settings); // Move this line to the end
-      // Move this line to the end
+      disableButton(settings);
     })
     .catch(console.error);
 }
@@ -171,7 +170,7 @@ function handleAddCardFormSubmit(evt) {
   cardList.prepend(cardElement);
   closeModal(cardModal);
   evt.target.reset();
-  disableButton(cardSubmitButton, settings); // Move this line to the end
+  disableButton(cardSubmitButton, settings);
 }
 profileEditButton.addEventListener("click", () => {
   nameInput.value = profileName.textContent;
