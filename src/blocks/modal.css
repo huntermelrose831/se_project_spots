@@ -138,6 +138,34 @@
   transition: 0.3s;
   border: none;
 }
+.modal__submit-btn-cancel {
+  width: 156px;
+  padding: 18px 0;
+  background-color: #ffffff;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #212121;
+}
+.modal__submit-btn-delete {
+  width: 156px;
+  padding: 18px 0;
+  background-color: #ff6565;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
 .modal__submit-btn:hover {
   opacity: 0.8;
   cursor: pointer;
@@ -191,6 +219,11 @@
   display: block;
   object-fit: contain;
   border-radius: 8px;
+}
+.modal__form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 @media screen and (max-width: 627px) {
   .modal {

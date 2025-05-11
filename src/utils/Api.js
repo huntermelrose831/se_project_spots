@@ -1,7 +1,7 @@
 class Api {
-  constructor({ baseUrl, header }) {
+  constructor({ baseUrl, headers }) {
     this._baseUrl = baseUrl;
-    this._header = header;
+    this._headers = headers;
   }
 
   getAppInfo() {
@@ -10,7 +10,7 @@ class Api {
 
   getInitialCards() {
     return fetch(`${this._baseUrl}/cards`, {
-      headers: this._header,
+      headers: this._headers,
     }).then((res) => {
       if (res.ok) {
         return res.json();
@@ -20,7 +20,7 @@ class Api {
   }
   getUserInfo() {
     return fetch(`${this._baseUrl}/users/me`, {
-      headers: this._header,
+      headers: this._headers,
     }).then((res) => {
       if (res.ok) {
         return res.json();
@@ -31,7 +31,7 @@ class Api {
   editUserInfo({ name, about }) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
-      headers: this._header,
+      headers: this._headers,
       // Send the data in the body as a JSON string.
       body: JSON.stringify({
         name,
@@ -47,7 +47,7 @@ class Api {
   editAvatarInfo({ avatar }) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
-      headers: this._header,
+      headers: this._headers,
       // Send the data in the body as a JSON string.
       body: JSON.stringify({
         avatar,

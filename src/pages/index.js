@@ -45,7 +45,7 @@ import AvatarBtn from "../images/pencilLight.svg";
 ];*/
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
-  header: {
+  headers: {
     authorization: "924751a2-426f-4bc5-ab74-ba7e42f02748",
     "Content-Type": "application/json",
   },
@@ -53,8 +53,7 @@ const api = new Api({
 
 api
   .getAppInfo()
-  .then((results) => {
-    const cards = results[0];
+  .then(([cards, userData]) => {
     cards.forEach((item) => {
       const cardElement = getCardElement(item);
       cardList.append(cardElement);
@@ -164,13 +163,16 @@ function handleEditFormSubmit(evt) {
 function handleAddCardFormSubmit(evt) {
   console.log("Form submitted");
   evt.preventDefault();
-
-  const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
-  const cardElement = getCardElement(inputValues);
-  cardList.prepend(cardElement);
-  closeModal(cardModal);
-  evt.target.reset();
-  disableButton(cardSubmitButton, settings);
+  api
+    .addCard({ name: cardNameInput.value, link: cardLinkInput.value })
+    .then((cardData) => {
+      const cardElement = getCardElement(cardData);
+      cardList.prepend(cardElement);
+      closeModal(cardModal);
+      evt.target.reset();
+      disableButton(cardSubmitButton, settings);
+    })
+    .catch(console.error);
 }
 profileEditButton.addEventListener("click", () => {
   nameInput.value = profileName.textContent;
