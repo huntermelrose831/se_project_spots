@@ -135,7 +135,7 @@
   font-weight: 500;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
+
   border: none;
 }
 .modal__submit-btn-cancel {
@@ -152,6 +152,16 @@
   transition: 0.3s;
   border: 1px solid #212121;
 }
+.modal__submit-btn-cancel:hover {
+  color: #ffffff;
+
+  background-color: #212121;
+  cursor: pointer;
+}
+.modal__submit-btn-delete:hover {
+  background-color: #ff3333;
+  cursor: pointer;
+}
 .modal__submit-btn-delete {
   width: 156px;
   padding: 18px 0;
@@ -166,6 +176,7 @@
   transition: 0.3s;
   border: none;
 }
+
 .modal__submit-btn:hover {
   opacity: 0.8;
   cursor: pointer;
@@ -220,7 +231,7 @@
   object-fit: contain;
   border-radius: 8px;
 }
-.modal__form {
+.modal__form-delete {
   display: flex;
   justify-content: center;
   gap: 20px;
