@@ -186,10 +186,7 @@ function handleEditFormSubmit(evt) {
       profileDescription.textContent = data.about;
       closeModal(editModal);
       evt.target.reset();
-      disableButton(
-        editFormElement.querySelector(".modal__submit-btn"),
-        settings
-      );
+      disableButton(submitBtn, settings);
     })
     .catch(console.error)
     .finally(() => {
@@ -200,6 +197,8 @@ function handleEditFormSubmit(evt) {
 function handleAddCardFormSubmit(evt) {
   console.log("Form submitted");
   evt.preventDefault();
+  const submitBtn = evt.submitter;
+  submitBtn.textContent = "Saving...";
   api
     .addCard({ name: cardNameInput.value, link: cardLinkInput.value })
     .then((cardData) => {
@@ -209,7 +208,10 @@ function handleAddCardFormSubmit(evt) {
       evt.target.reset();
       disableButton(cardSubmitButton, settings);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      submitBtn.textContent = "Save";
+    });
 }
 profileEditButton.addEventListener("click", () => {
   nameInput.value = profileName.textContent;
@@ -252,6 +254,8 @@ const previewModalCloseButton = previewModal.querySelector(
 avatarForm.addEventListener("submit", handleAvatarSubmit);
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
+  const submitBtn = evt.submitter;
+  submitBtn.textContent = "Saving...";
   console.log("Avatar URL being submitted:", avatarInput.value); // Add this line
 
   api
@@ -266,6 +270,9 @@ function handleAvatarSubmit(evt) {
     })
     .catch((error) => {
       console.error("Error updating avatar:", error); // Add this line
+    })
+    .finally(() => {
+      submitBtn.textContent = "Save";
     });
 }
 let selectedCard;
@@ -295,7 +302,7 @@ function handleLike(evt, cardId) {
   console.log("Before API call - isLiked:", isLiked);
 
   api
-    .changeLikeStatus(cardId, isLiked)
+    .changeLikeStatus(cardId, !isLiked)
     .then((res) => {
       if (isLiked) {
         evt.target.classList.remove("card__like-button_liked");

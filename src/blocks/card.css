@@ -37,7 +37,7 @@
   background: url(../images/liked.svg);
 }
 .card__like-button {
-  background: url(../images/Union.svg);
+  background: url(../images/LikeIcon.svg);
   height: 20px;
   width: 24px;
   border: none;
@@ -52,12 +52,12 @@
   background: transparent url(../images/LikeIconPink.svg);
 }
 .card__like-button_liked {
-  background-image: url(../images/LikeIcon.svg);
+  background-image: url(../images/Union.svg);
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  opacity: 0.4;
+  opacity: 1;
 }
 
 .card__title {

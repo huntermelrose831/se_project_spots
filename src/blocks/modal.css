@@ -105,6 +105,28 @@
   opacity: 1;
   cursor: pointer;
 }
+.modal__close-btn-delete {
+  top: -5px;
+  transition: 0.3s;
+  position: absolute;
+  right: -47px;
+  width: 40px;
+  color: #fff;
+  height: 40px;
+  border: none;
+  background: transparent url(../images/modalclosebtnwhite.svg) center no-repeat;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+  border: none;
+  cursor: pointer;
+
+  padding: 0;
+  margin: 0;
+}
+.modal__close-btn-delete:hover {
+  opacity: 0.4;
+  cursor: pointer;
+}
 .modal__title {
   margin: 0 0 32px;
   font-weight: 500;
@@ -112,6 +134,25 @@
   line-height: 1;
   font-family: "Poppins", sans-serif;
   color: #212121;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#modal-title-type-avatar {
+  justify-content: flex-start;
+  margin: 0 0 32px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
+  font-family: "Poppins", sans-serif;
+  color: #212121;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
 }
 .modal__label {
   display: flex;
