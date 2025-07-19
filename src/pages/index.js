@@ -104,7 +104,8 @@ const cardSubmitButton = cardModal.querySelector(".modal__submit-btn");
 const avatarModal = document.querySelector("#avatar-modal");
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImageElement = previewModal.querySelector(".modal__image");
-const previwModalCaptionElement = previewModal.querySelector(".modal__caption");
+const previewModalCaptionElement =
+  previewModal.querySelector(".modal__caption");
 
 const avatarModalCloseButton = avatarModal.querySelector(".modal__close-btn");
 const avatarForm = avatarModal.querySelector(".modal__form");
@@ -142,7 +143,7 @@ function getCardElement(data) {
     openModal(previewModal);
     previewModalImageElement.src = data.link;
     previewModalImageElement.alt = data.name;
-    previwModalCaptionElement.textContent = data.name;
+    previewModalCaptionElement.textContent = data.name;
   });
 
   cardLikeButton.addEventListener("click", (evt) => handleLike(evt, data._id));
