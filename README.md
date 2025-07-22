@@ -2,13 +2,14 @@
 
 A responsive web application that allows users to create profiles, share images with descriptions, and curate their favorite content through a like system.
 
-![Spots Preview](src/images/spotssnip.PNG)
+![Spots Preview](img width="841" height="856" alt="spotssnip" src/images/spotssnip.PNG)
 
 
 ## 🌐 Live Demo
 [View Live Site](https://huntermelrose831.github.io/se_project_spots) | [Watch Demo Video](https://drive.google.com/file/d/1Jyu-_D8q_f7_nHr57D64ateDAZhQttGu/view?usp=sharing)
 
 ## 🎯 Project Overview
+ src="https://github.com/user-attachments/assets/e3cd38a7-596c-49d9-b91d-c72ad9dbff97" />
 
 Spots was born from my desire to create a clean, user-friendly image sharing experience that works seamlessly across all devices. As someone passionate about both photography and web development, I wanted to build a platform that prioritizes visual content while maintaining excellent usability.
 
