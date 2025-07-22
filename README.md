@@ -9,7 +9,6 @@ A responsive web application that allows users to create profiles, share images 
 [View Live Site](https://huntermelrose.dev/spots/) | [Watch Demo Video](https://drive.google.com/file/d/1Jyu-_D8q_f7_nHr57D64ateDAZhQttGu/view?usp=sharing)
 
 ## 🎯 Project Overview
- src="https://github.com/user-attachments/assets/e3cd38a7-596c-49d9-b91d-c72ad9dbff97" />
 
 Spots was born from my desire to create a clean, user-friendly image sharing experience that works seamlessly across all devices. As someone passionate about both photography and web development, I wanted to build a platform that prioritizes visual content while maintaining excellent usability.
 
@@ -99,13 +98,6 @@ This project demonstrates my understanding of modern responsive web design:
 - Advanced filtering and search
 - Progressive Web App capabilities
 
-## 🤝 Connect With Me
-
-I'm passionate about creating user-centered web experiences and always excited to discuss new opportunities!
-
-- **GitHub**: [@huntermelrose831](https://github.com/huntermelrose831)
-- **LinkedIn**: [Your LinkedIn Profile]
-- **Email**: [your.email@example.com]
 
 ## 📄 License
 
