@@ -2,7 +2,7 @@
 
 A responsive web application that allows users to create profiles, share images with descriptions, and curate their favorite content through a like system.
 
-![Spots Preview](img width="841" height="856" alt="spotssnip" src/images/spotssnip.PNG)
+![Spots Preview](src/images/spotssnip.PNG)
 
 
 ## 🌐 Live Demo
