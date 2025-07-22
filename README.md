@@ -6,7 +6,7 @@ A responsive web application that allows users to create profiles, share images 
 
 
 ## 🌐 Live Demo
-[View Live Site](https://huntermelrose831.github.io/se_project_spots) | [Watch Demo Video](https://drive.google.com/file/d/1Jyu-_D8q_f7_nHr57D64ateDAZhQttGu/view?usp=sharing)
+[View Live Site](https://huntermelrose.dev/spots/) | [Watch Demo Video](https://drive.google.com/file/d/1Jyu-_D8q_f7_nHr57D64ateDAZhQttGu/view?usp=sharing)
 
 ## 🎯 Project Overview
  src="https://github.com/user-attachments/assets/e3cd38a7-596c-49d9-b91d-c72ad9dbff97" />
